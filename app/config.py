@@ -1,6 +1,3 @@
-from pydantic_settings import BaseSettings, SettingsConfigDict
-
-
 class Settings(BaseSettings):
     # Application settings
     APP_NAME: str = "book-recommendation-api"
@@ -20,8 +17,10 @@ class Settings(BaseSettings):
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
 
+    # CORS settings (ADICIONE ESTA LINHA)
+    ALLOWED_ORIGINS: list = ["*"]
+
     model_config = SettingsConfigDict(env_file=".env", case_sensitive=True)
 
 
-# Esta linha é ESSENCIAL
 settings = Settings()
