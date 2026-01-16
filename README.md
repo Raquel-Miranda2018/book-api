@@ -226,10 +226,9 @@ book-api/
 
 ### 1️⃣ Clone o Repositório
 
-```bash
-git clone https://github.com/GabrielPLeite/book-api.git
+git clone https://github.com/Raquel-Miranda2018/book-api.git
 cd book-api
-```
+git checkout feat-adding-api
 
 ### 2️⃣ Crie um Ambiente Virtual
 
