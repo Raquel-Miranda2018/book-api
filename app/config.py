@@ -5,7 +5,6 @@ class Settings(BaseSettings):
     APP_NAME: str = "book-recommendation-api"
     APP_VERSION: str = "1.0.0"
     ENVIRONMENT: str = "development"
-
     DATABASE_URL: str = "sqlite:///./data/books.db"
 
     ADMIN_USERNAME: str = "admin"
@@ -15,6 +14,9 @@ class Settings(BaseSettings):
     SECRET_KEY: str = "change-me-in-production"
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
+
+    # ➜ ADICIONE ESTA LINHA:
+    REFRESH_TOKEN_EXPIRE_DAYS: int = 7
 
     ALLOWED_ORIGINS: list[str] = ["*"]
 
