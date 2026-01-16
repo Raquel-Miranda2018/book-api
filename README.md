@@ -600,33 +600,14 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ---
 
-## 👨‍💻 Autor
-
-**Gabriel de Paula Leite**
-
-- GitHub: [@GabrielPLeite](https://github.com/GabrielPLeite)
-- LinkedIn: [Gabriel de Paula Leite](https://linkedin.com/in/gabriel-de-paula-leite)
-
----
-
-## 📞 Suporte
-
-Para questões e suporte:
-- 📧 Email: admin@example.com
-- 🐛 Issues: [GitHub Issues](https://github.com/GabrielPLeite/book-api/issues)
-- 📖 Docs: [Swagger UI](http://localhost:8000/docs)
-
----
 
 ## 🙏 Agradecimentos
-
 - FIAP Pós Tech - Machine Learning Engineering
 - Books to Scrape - Fonte dos dados
 - FastAPI Community
-- Claude Code - Assistente de desenvolvimento
 
 ---
 
-**Desenvolvido com ❤️ para o Tech Challenge - FIAP 2025**
+**Desenvolvido para o Tech Challenge - FIAP 2025**
 
-🤖 *Generated with [Claude Code](https://claude.com/claude-code)*
+*Generated with [Claude Code](https://claude.com/claude-code)*
