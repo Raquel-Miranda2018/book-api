@@ -92,76 +92,72 @@ API pública para consulta e recomendação de livros, desenvolvida como parte d
 
 ## 🏗️ Arquitetura
 
-flowchart LR
-
-    %% ======= Data Source =======
-    subgraph DS[Data Source]
+```mermaid
+graph TB
+    subgraph "Data Source"
         A[books.toscrape.com]
     end
 
-    %% ======= Data Pipeline =======
-    subgraph DP[Data Pipeline]
+    subgraph "Data Pipeline"
         B[Web Scraper<br/>BeautifulSoup]
         C[CSV Storage<br/>data/books.csv]
         D[SQLite Database<br/>1000+ books]
     end
 
-    %% ======= API Layer =======
-    subgraph API[API Layer - FastAPI]
+    subgraph "API Layer - FastAPI"
         E[CORS Middleware]
         F[Logging Middleware]
         G[JWT Auth]
         H[API Routers]
     end
 
-    %% ======= Business Logic =======
-    subgraph BL[Business Logic]
+    subgraph "Business Logic"
         I[Book Service]
         J[Stats Service]
         K[Auth Service]
         L[ML Service]
     end
 
-    %% ======= Monitoring =======
-    subgraph MON[Monitoring]
+    subgraph "Monitoring"
         M[API Logs DB]
         N[Streamlit Dashboard]
     end
 
-    %% ======= Clients =======
-    subgraph CLIENTS[Clients]
-        O[Data Scientists]
+    subgraph "Clients"
+        O[Web/Mobile Apps]
         P[ML Models]
-        Q[Web/Mobile Apps]
+        Q[Data Scientists]
     end
 
-    %% ======= FLOWS =======
+    A -->|Scraping| B
+    B --> C
+    C -->|Migration| D
 
-    %% Scraping pipeline
-    A --> B --> C --> D
-
-    %% Clients access API
     O --> E
     P --> E
     Q --> E
 
-    %% API flow
-    E --> F --> G --> H
+    E --> F
+    F --> G
+    G --> H
 
-    %% Routers to Services
     H --> I
     H --> J
     H --> K
     H --> L
 
-    %% Services consume DB
     I --> D
     J --> D
     K --> D
     L --> D
 
-    %% Monitoring
-    F --> M --> N
+    F --> M
+    M --> N
+
+    style A fill:#e1f5ff
+    style D fill:#c8e6c9
+    style H fill:#fff9c4
+    style N fill:#f8bbd0
 ```
 
 ### 📁 Estrutura do Projeto
