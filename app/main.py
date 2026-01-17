@@ -53,16 +53,31 @@ async def root():
 @app.on_event("startup")
 async def startup_event():
     """Run on application startup"""
+    from app.database import SessionLocal
+    from app.utils.security import get_password_hash
 
-    # Garante que todas as tabelas (books, api_logs, users, etc.) existam
+    # Garante que todas as tabelas existam
     Base.metadata.create_all(bind=engine)
 
-    print(f"🚀 Starting {settings.APP_NAME} v{settings.APP_VERSION}")
-    print(f"📝 Environment: {settings.ENVIRONMENT}")
-    print(f"📚 API documentation available at: /docs")
+    # Cria o admin se não existir
+    db = SessionLocal()
+    try:
+        admin = db.query(User).filter(User.username == settings.ADMIN_USERNAME).first()
+        if not admin:
+            admin_user = User(
+                username=settings.ADMIN_USERNAME,
+                email=f"{settings.ADMIN_USERNAME}@example.com",
+                hashed_password=get_password_hash(settings.ADMIN_PASSWORD),
+                is_active=True,
+                is_admin=True,
+            )
+            db.add(admin_user)
+            db.commit()
+            print(f"✅ Admin '{settings.ADMIN_USERNAME}' criado com sucesso!")
+    except Exception as e:
+        print(f"❌ Erro ao criar admin: {e}")
+    finally:
+        db.close()
 
-
-@app.on_event("shutdown")
-async def shutdown_event():
-    """Run on application shutdown"""
-    print(f"👋 Shutting down {settings.APP_NAME}")
+    print(f"🚀 API {settings.APP_NAME} v{settings.APP_VERSION} Online")
+    
