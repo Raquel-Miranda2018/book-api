@@ -3,6 +3,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.config import settings
 from app.api.v1 import health, books, categories, stats, auth, scraping, ml
 from app.utils.middleware import LoggingMiddleware
+from app.database import Base, engine
+from app.models.book import Book
+from app.models.user import User
+from app.models.api_log import APILog
 
 # Create FastAPI application
 app = FastAPI(
@@ -49,6 +53,10 @@ async def root():
 @app.on_event("startup")
 async def startup_event():
     """Run on application startup"""
+
+    # Garante que todas as tabelas (books, api_logs, users, etc.) existam
+    Base.metadata.create_all(bind=engine)
+
     print(f"🚀 Starting {settings.APP_NAME} v{settings.APP_VERSION}")
     print(f"📝 Environment: {settings.ENVIRONMENT}")
     print(f"📚 API documentation available at: /docs")
