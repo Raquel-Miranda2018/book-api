@@ -599,6 +599,14 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ---
 
+👨‍💻 Autores
+Carlos Henrique Neves Júnior
+Gabriel de Paula Leite – RM 370125
+Raquel Silva Miranda – RM 370049
+Bruno Bento
+Victor Hugo
+
+---
 
 ## 🙏 Agradecimentos
 - FIAP Pós Tech - Machine Learning Engineering
