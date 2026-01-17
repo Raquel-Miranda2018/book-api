@@ -599,12 +599,15 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ---
 
-👨‍💻 Autores
-Carlos Henrique Neves Júnior
-Gabriel de Paula Leite – RM 370125
-Raquel Silva Miranda – RM 370049
-Bruno Bento
-Victor Hugo
+## 👨‍💻 Autores
+
+| Nome                         | RM        |
+|------------------------------|-----------|
+| Bruno Bento                 | —         |
+| Carlos Henrique Neves Júnior| —         |
+| Gabriel de Paula Leite      | 370125    |
+| Raquel Silva Miranda        | 370049    |
+| Victor Hugo                 | —         |
 
 ---
 
