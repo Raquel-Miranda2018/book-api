@@ -227,8 +227,9 @@ book-api/
 ### 1️⃣ Clone o Repositório
 
 ```bash
-git clone https://github.com/GabrielPLeite/book-api.git
+git clone https://github.com/Raquel-Miranda2018/book-api.git
 cd book-api
+git checkout feat-adding-api
 ```
 
 ### 2️⃣ Crie um Ambiente Virtual
@@ -600,21 +601,15 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ---
 
-## 👨‍💻 Autor
+## 👨‍💻 Autores
 
-**Gabriel de Paula Leite**
-
-- GitHub: [@GabrielPLeite](https://github.com/GabrielPLeite)
-- LinkedIn: [Gabriel de Paula Leite](https://linkedin.com/in/gabriel-de-paula-leite)
-
----
-
-## 📞 Suporte
-
-Para questões e suporte:
-- 📧 Email: admin@example.com
-- 🐛 Issues: [GitHub Issues](https://github.com/GabrielPLeite/book-api/issues)
-- 📖 Docs: [Swagger UI](http://localhost:8000/docs)
+| Nome                         | RM        |
+|------------------------------|-----------|
+| Carlos Henrique Neves Júnior| —         |
+| Gabriel de Paula Leite      | 370125    |
+| Raquel Silva Miranda        | 370049    |
+| Bruno Bento                 | —         |
+| Victor Hugo                 | —         |
 
 ---
 
@@ -623,10 +618,7 @@ Para questões e suporte:
 - FIAP Pós Tech - Machine Learning Engineering
 - Books to Scrape - Fonte dos dados
 - FastAPI Community
-- Claude Code - Assistente de desenvolvimento
 
 ---
 
-**Desenvolvido com ❤️ para o Tech Challenge - FIAP 2025**
-
-🤖 *Generated with [Claude Code](https://claude.com/claude-code)*
+**Desenvolvido para o Tech Challenge - FIAP 2025**
