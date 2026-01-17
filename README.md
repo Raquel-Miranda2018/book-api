@@ -226,9 +226,11 @@ book-api/
 
 ### 1️⃣ Clone o Repositório
 
+```bash
 git clone https://github.com/Raquel-Miranda2018/book-api.git
 cd book-api
 git checkout feat-adding-api
+```
 
 ### 2️⃣ Crie um Ambiente Virtual
 
@@ -603,15 +605,16 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 | Nome                         | RM        |
 |------------------------------|-----------|
-| Bruno Bento                 | —         |
 | Carlos Henrique Neves Júnior| —         |
 | Gabriel de Paula Leite      | 370125    |
 | Raquel Silva Miranda        | 370049    |
+| Bruno Bento                 | —         |
 | Victor Hugo                 | —         |
 
 ---
 
 ## 🙏 Agradecimentos
+
 - FIAP Pós Tech - Machine Learning Engineering
 - Books to Scrape - Fonte dos dados
 - FastAPI Community
@@ -619,5 +622,3 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 ---
 
 **Desenvolvido para o Tech Challenge - FIAP 2025**
-
-*Generated with [Claude Code](https://claude.com/claude-code)*
