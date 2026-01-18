@@ -608,8 +608,8 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 | Carlos Henrique Neves Júnior| —         |
 | Gabriel de Paula Leite      | 370125    |
 | Raquel Silva Miranda        | 370049    |
-| Bruno Bento                 | —         |
-| Victor Hugo                 | —         |
+| Bruno Pereira Bento         | 369930    |
+| Victor Hugo Lopes Carvalho  | 370185    |
 
 ---
 
