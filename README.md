@@ -605,10 +605,10 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 | Nome                         | RM        |
 |------------------------------|-----------|
-| Carlos Henrique Neves Júnior| —         |
+| Bruno Pereira Bento         | 369930    |
+| Carlos Henrique Neves Júnior| 369443    |
 | Gabriel de Paula Leite      | 370125    |
 | Raquel Silva Miranda        | 370049    |
-| Bruno Pereira Bento         | 369930    |
 | Victor Hugo Lopes Carvalho  | 370185    |
 
 ---
