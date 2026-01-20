@@ -1,0 +1,138 @@
+================================================================================
+TECH CHALLENGE - FASE 1: MACHINE LEARNING ENGINEERING
+FIAP PÓS TECH - BOOK RECOMMENDATION API
+================================================================================
+
+REPOSITÓRIO GITHUB
+------------------
+https://github.com/Raquel-Miranda2018/book-api
+
+BRANCH PRINCIPAL DO PROJETO
+---------------------------
+feat-adding-api
+
+COMANDO PARA ACESSAR O CÓDIGO
+------------------------------
+git clone https://github.com/Raquel-Miranda2018/book-api.git
+cd book-api
+git checkout feat-adding-api
+
+
+================================================================================
+LINKS IMPORTANTES
+================================================================================
+
+📌 DEPLOY EM PRODUÇÃO (RENDER)
+-------------------------------
+API (Swagger): https://book-api-raquel.onrender.com/docs
+API (ReDoc): https://book-api-raquel.onrender.com/redoc
+Health Check: https://book-api-raquel.onrender.com/api/v1/health
+
+📹 VÍDEO DE APRESENTAÇÃO (YOUTUBE)
+----------------------------------
+Link: https://www.youtube.com/watch?v=zM7JIZw45hI
+
+📊 DASHBOARD STREAMLIT (FRONT-END)
+-----------------------------------
+Executar localmente: streamlit run app_streamlit.py
+URL local: http://localhost:8501
+
+
+================================================================================
+DESCRIÇÃO DO PROJETO
+================================================================================
+
+🎯 OBJETIVO
+-----------
+Desenvolver uma API RESTful pública para consulta e recomendação de livros,
+implementando um pipeline completo de dados desde web scraping até endpoints
+ML-ready, com autenticação JWT, monitoramento em tempo real e deploy em produção.
+
+📊 STATUS DO PROJETO
+--------------------
+✅ 15 Endpoints funcionais (100% dos requisitos + extras)
+✅ 3/3 Desafios Bônus implementados
+✅ 1000 livros no banco de dados
+✅ Swagger/OpenAPI documentação automática
+✅ Testes automatizados
+✅ Deploy em produção (Render)
+
+🚀 FEATURES IMPLEMENTADAS
+--------------------------
+
+Core Features (Obrigatórias):
+- Web scraping automatizado (books.toscrape.com)
+- Armazenamento em SQLite com 1000+ livros
+- API RESTful com FastAPI
+- 5 endpoints core + 4 endpoints de insights
+- Documentação Swagger automática
+- Deploy em nuvem (Render)
+
+🏆 Desafio 1: Sistema de Autenticação JWT
+- Login com OAuth2 (username/password)
+- Access tokens (30 min) e Refresh tokens (7 dias)
+- Proteção de rotas admin-only
+- Trigger do scraper protegido
+
+🤖 Desafio 2: Pipeline ML-Ready
+- Features engenheiradas para ML (normalização, encoding)
+- Export de dados para treinamento (JSON/CSV)
+- Endpoint para receber predições de modelos
+
+📊 Desafio 3: Monitoramento & Analytics
+- Logging automático de todas as requisições
+- Middleware de performance tracking
+- Dashboard Streamlit em tempo real
+
+
+================================================================================
+ENDPOINTS DA API
+================================================================================
+
+HEALTH CHECK: GET /api/v1/health
+BOOKS: GET /api/v1/books, GET /api/v1/books/{id}, GET /api/v1/books/search
+STATS: GET /api/v1/stats/overview, GET /api/v1/stats/categories
+AUTH: POST /api/v1/auth/login, GET /api/v1/auth/me
+ADMIN: POST /api/v1/scraping/trigger (🔒 admin only)
+ML: GET /api/v1/ml/features, POST /api/v1/ml/predictions
+
+
+================================================================================
+COMO REPRODUZIR O PROJETO (LOCAL)
+================================================================================
+
+1. git clone https://github.com/Raquel-Miranda2018/book-api.git
+2. cd book-api && git checkout feat-adding-api
+3. python -m venv .venv && .\.venv\Scripts\activate
+4. pip install -r requirements.txt
+5. python scripts/migrate_csv_to_db.py
+6. python scripts/create_admin_user.py
+7. uvicorn app.main:app --reload
+
+
+================================================================================
+DIAGRAMA DE ARQUITETURA
+================================================================================
+
+O diagrama visual completo (Mermaid) está disponível no README.md do repositório.
+
+FLUXO SIMPLIFICADO:
+books.toscrape.com → Web Scraper → CSV → SQLite Database
+Clients → FastAPI (CORS/JWT/Logging) → Services → Database
+Logging Middleware → API Logs DB → Streamlit Dashboard
+
+
+================================================================================
+EQUIPE
+================================================================================
+
+Bruno Pereira Bento          - RM 369930
+Carlos Henrique Neves Júnior - RM 369443
+Gabriel de Paula Leite       - RM 370125
+Raquel Silva Miranda         - RM 370049
+Victor Hugo Lopes Carvalho   - RM 370185
+
+
+================================================================================
+FIM DO DOCUMENTO
+================================================================================
