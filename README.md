@@ -21,6 +21,12 @@ API pública para consulta e recomendação de livros, desenvolvida como parte d
 - ✅ **Testes** automatizados
 - ⏳ **Deploy** em produção (Render)
 
+### 🎥 Vídeo de Apresentação
+
+Vídeo demonstrando a arquitetura, API em funcionamento e dashboard:
+
+- YouTube: https://www.youtube.com/watch?v=zM7JIZw45hI
+
 ---
 
 ## 🚀 Features Implementadas
