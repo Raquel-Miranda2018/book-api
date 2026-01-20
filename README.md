@@ -247,6 +247,9 @@ venv\Scripts\activate  # Windows
 pip install -r requirements.txt
 ```
 
+```Rodar o Streamlit
+streamlit run app_streamlit.py
+
 ### 4️⃣ Configure as Variáveis de Ambiente
 
 ```bash
@@ -302,9 +305,9 @@ uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ### 8️⃣ Acesse a Documentação
 
 Abra seu navegador em:
-- **Swagger UI**: http://localhost:8000/docs
-- **ReDoc**: http://localhost:8000/redoc
-- **API Root**: http://localhost:8000/
+- **Swagger UI**: http://localhost:8501/docs
+- **ReDoc**: http://localhost:8501/redoc
+- **API Root**: http://localhost:8501/
 
 ---
 
