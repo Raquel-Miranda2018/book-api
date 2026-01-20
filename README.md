@@ -302,9 +302,9 @@ uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ### 8️⃣ Acesse a Documentação
 
 Abra seu navegador em:
-- **Swagger UI**: http://localhost:8501/docs
-- **ReDoc**: http://localhost:8501/redoc
-- **API Root**: http://localhost:8501/
+- **Swagger UI**: http://localhost:8000/docs
+- **ReDoc**: http://localhost:8000/redoc
+- **API Root**: http://localhost:8000/
 
 ---
 
@@ -314,27 +314,27 @@ Abra seu navegador em:
 
 #### 1. Health Check
 ```bash
-curl http://localhost:8501/api/v1/health
+curl http://localhost:8000/api/v1/health
 ```
 
 #### 2. Listar Livros (Paginado)
 ```bash
-curl "http://localhost:8501/api/v1/books?page=1&page_size=10"
+curl "http://localhost:8000/api/v1/books?page=1&page_size=10"
 ```
 
 #### 3. Buscar Livro por ID
 ```bash
-curl http://localhost:8501/api/v1/books/5
+curl http://localhost:8000/api/v1/books/5
 ```
 
 #### 4. Buscar por Título
 ```bash
-curl "http://localhost:8501/api/v1/books/search?title=light"
+curl "http://localhost:8000/api/v1/books/search?title=light"
 ```
 
 #### 5. Login (Obter Token JWT)
 ```bash
-curl -X POST http://localhost:8501/api/v1/auth/login \
+curl -X POST http://localhost:8000/api/v1/auth/login \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -d "username=admin&password=Admin@123"
 ```
@@ -352,13 +352,13 @@ Resposta:
 ```bash
 TOKEN="your_access_token_here"
 
-curl -X POST http://localhost:8501/api/v1/scraping/trigger \
+curl -X POST http://localhost:8000/api/v1/scraping/trigger \
   -H "Authorization: Bearer $TOKEN"
 ```
 
 #### 7. ML Features
 ```bash
-curl "http://localhost:8501/api/v1/ml/features?limit=5"
+curl "http://localhost:8000/api/v1/ml/features?limit=5"
 ```
 
 ### Usando Python (requests)
@@ -367,7 +367,7 @@ curl "http://localhost:8501/api/v1/ml/features?limit=5"
 import requests
 
 # Base URL
-BASE_URL = "http://localhost:8501/api/v1"
+BASE_URL = "http://localhost:8000/api/v1"
 
 # 1. Listar livros
 response = requests.get(f"{BASE_URL}/books", params={"page": 1, "page_size": 20})
@@ -416,6 +416,9 @@ print(f"Predições recebidas: {result['predictions_received']}")
 Para visualizar métricas em tempo real:
 
 ```bash
+streamlit run app_streamlit.py
+
+```Extra
 cd monitoring
 pip install -r requirements.txt
 streamlit run dashboard.py
@@ -524,8 +527,8 @@ git push origin feat-adding-api
 4. **Deploy**: Clique em "Create Web Service"
 
 5. **Verificar**: Após o deploy:
-   - Health check: `https://your-app.onrender.com/api/v1/health`
-   - Swagger: `https://your-app.onrender.com/docs`
+   - Health check: `https://book-api-raquel.onrender.com/api/v1/health`
+   - Swagger: `https://book-api-raquel.onrender.com/docs`
 
 ---
 
