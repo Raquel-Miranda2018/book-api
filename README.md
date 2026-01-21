@@ -19,7 +19,7 @@ API pública para consulta e recomendação de livros, desenvolvida como parte d
 - ✅ **1000 livros** no banco de dados
 - ✅ **Swagger/OpenAPI** documentação automática
 - ✅ **Testes** automatizados
-- ⏳ **Deploy** em produção (Render)
+- ✅ **Deploy** (Render)
 
 ### 🎥 Vídeo de Apresentação
 
